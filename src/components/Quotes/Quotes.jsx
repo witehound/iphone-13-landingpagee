@@ -1,8 +1,15 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useLayoutEffect } from "react";
 import { Section, TextContainer, Text } from "./QuotesStyles.js";
-import { animateQuote } from "../../utils/gsap.js";
+import {
+  animateQuote,
+  createGsapPlugIn,
+  createFixedHero,
+} from "../../utils/gsap.js";
 
 const Quotes = () => {
+  createGsapPlugIn();
+
+  const sectionRef = useRef(null);
   const textLineOne = useRef(null);
   const textLineTwo = useRef(null);
   const textLineThree = useRef(null);
@@ -18,8 +25,15 @@ const Quotes = () => {
       textLineFive,
     ]);
   }, []);
+
+  useLayoutEffect(() => {
+    let trigger = createFixedHero(sectionRef.current);
+    return () => {
+      if (trigger) trigger.kill();
+    };
+  }, []);
   return (
-    <Section>
+    <Section ref={sectionRef}>
       <TextContainer>
         <Text>
           <span ref={textLineOne}>

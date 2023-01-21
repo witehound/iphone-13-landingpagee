@@ -1,4 +1,5 @@
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export const animateQuote = (quotes) => {
   for (let q in quotes) {
@@ -9,3 +10,13 @@ export const animateQuote = (quotes) => {
     });
   }
 };
+
+export const createGsapPlugIn = () => gsap.registerPlugin(ScrollTrigger);
+
+export const createFixedHero = (elem) =>
+  ScrollTrigger.create({
+    trigger: elem,
+    start: "top top",
+    pin: true,
+    pinSpacing: false,
+  });

@@ -1,6 +1,6 @@
 import "./App.css";
 import { GlobalStyle } from "./styles/globalStyles";
-import { Quotes, Hero } from "./components";
+import { Quotes, Hero, PhoneModel } from "./components";
 
 function App() {
   return (
@@ -8,6 +8,7 @@ function App() {
       <GlobalStyle />
       <Quotes />
       <Hero />
+      <PhoneModel />
     </div>
   );
 }

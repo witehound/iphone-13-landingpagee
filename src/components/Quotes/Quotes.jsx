@@ -23,22 +23,28 @@ const Quotes = () => {
       <TextContainer>
         <Text>
           <span ref={textLineOne}>
-            You Cant Connect The Dots Looking Forward.
+            &#8220; You Cant Connect The Dots Looking Forward.
           </span>
         </Text>
         <Text>
           <span ref={textLineTwo}>
-            You Can Only Conneect The Dots Lokking Backward.
+            &nbsp;&nbsp;&nbsp;You Can Only Conneect The Dots Looking Backward.
           </span>
         </Text>
         <Text>
+          &nbsp;&nbsp;&nbsp;
           <span ref={textLineThree}>So You Have To Trust The Dots</span>
         </Text>
         <Text>
-          <span ref={textLineFour}>Will SomeHow Connect In Your Future.</span>
+          &nbsp;&nbsp;&nbsp;
+          <span ref={textLineFour}>
+            Will SomeHow Connect In Your Future. &#8221;
+          </span>
         </Text>
         <Text>
-          <span ref={textLineFive}>Steve Jobs</span>
+          <span ref={textLineFive} className="author">
+            &#x23AF; Steve Jobs
+          </span>
         </Text>
       </TextContainer>
     </Section>

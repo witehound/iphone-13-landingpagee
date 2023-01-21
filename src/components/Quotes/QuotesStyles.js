@@ -1,10 +1,4 @@
-import styled, { keyframes } from "styled-components";
-
-const moveUp = keyframes`
-100%{
-    transform : translateY(0)
-}
-`;
+import styled from "styled-components";
 
 export const Section = styled.section`
   width: 100vw;
@@ -35,15 +29,19 @@ export const Text = styled.p`
   span {
     position: absolute;
     transform: translateY(3rem);
-    /* animation-name: ${moveUp};
-    animation-duration: 2.5s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards; */
     font-family: var(--fontL);
     -webkit-font-family: var(--fontL);
-    background-image: linear-gradient(45deg, var(--gradient));
+    background-image: linear-gradient(-45deg, var(--gradient));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  .author {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    background-image: linear-gradient(-180deg, var(--gradient));
   }
 `;

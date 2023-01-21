@@ -43,21 +43,21 @@ h1,h2,h2,h4,h5,h6{
 }
 
 @font-face {
-    font-family: 'Source Sans Pro Light';
-    src: local('Source Sans Pro Light'), url(${fontLight}), format("truetype");
+    font-family: 'Source Sans Pro light';
+    src: local('Source Sans Pro light'), url(${fontLight}), format("truetype");
     font-display : swap;
     font-style : normal;
 }
 
 @font-face {
-    font-family: 'Source Sans Pro Regular';
-    src: local('Source Sans Pro Regular'), url(${fontRegular}), format("truetype");
+    font-family: 'Source Sans Pro';
+    src: local('Source Sans Pro'), url(${fontRegular}), format("truetype");
     font-display : swap;
     font-style : normal;
 }
 
 body{
-    font-family: 'Source Sans Pro Regular', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     overflow-x: hidden;
 }
 `;

@@ -33,11 +33,17 @@ export const Text = styled.p`
   height: var(--fontmd);
   overflow: hidden;
   span {
-    background-color: blue;
     position: absolute;
     transform: translateY(3rem);
-    animation-name: ${moveUp};
+    /* animation-name: ${moveUp};
     animation-duration: 2.5s;
     animation-timing-function: ease;
+    animation-fill-mode: forwards; */
+    font-family: var(--fontL);
+    -webkit-font-family: var(--fontL);
+    background-image: linear-gradient(45deg, var(--gradient));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 `;

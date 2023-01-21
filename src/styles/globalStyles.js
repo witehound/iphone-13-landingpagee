@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import { fontLight, fontRegular } from "../assets";
 
-export const globalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
 :root{
     // Fonts As per the type scale generator => https://material-io.cn/inline-tools/typography/
  --fontBig: 7em; //88 px

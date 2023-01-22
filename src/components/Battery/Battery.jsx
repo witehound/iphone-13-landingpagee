@@ -8,7 +8,7 @@ const Battery = () => {
     batteryComponentTl(battery);
   }, []);
   return (
-    <Section>
+    <Section id="battery">
       <Title>Go All Day With A single Charge ...</Title>
       <BatteryList ref={battery}>
         <li />

@@ -6,11 +6,12 @@ import { useThree } from "@react-three/fiber";
 function Model(props) {
   const { nodes, materials } = useGLTF("/scene.gltf");
   let camera = useThree((state) => state.camera);
+  let scene = useThree((state) => state.scene);
 
   useLayoutEffect(() => {
     // to(camera);
     // return () => {};
-    // phoneScrollTrigerOne("phone-model", camera);
+    phoneScrollTrigerOne("#phone-model", camera, "#battery", scene);
   }, []);
   return (
     <group {...props} dispose={null}>

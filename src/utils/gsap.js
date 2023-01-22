@@ -27,15 +27,16 @@ export const fromTo = (elem) => {
 
 export const to = (elem) => gsap.to(elem.position, { x: 1 });
 
-export const phoneScrollTrigerOne = (elem, camera) => {
-  const trigger = {
-    trigger: elem,
-    start: "top top",
-    bottom: "bottom+=500 bottom",
-    markers: true,
-  };
+export const phoneScrollTrigerOne = (elem, camera, end, scene) => {
+  camera.position.set(0, 2, 6);
   const t1 = gsap.timeline({
-    scrollTrigger: trigger,
+    scrollTrigger: {
+      trigger: elem,
+      start: "top+=200 top",
+      endTrigger: end,
+      end: "top top",
+      scrub: true,
+    },
   });
 
   t1.fromTo(
@@ -44,13 +45,59 @@ export const phoneScrollTrigerOne = (elem, camera) => {
       y: 2,
     },
     { y: 0 }
-  ).fromTo(
-    camera.position,
-    {
-      x: 1,
-    },
-    { x: 0 }
-  );
+  )
+    .to(scene.rotation, {
+      y: 0.8,
+    })
+    .to(scene.rotation, {
+      y: 3,
+    })
+    .to(
+      scene.rotation,
+      {
+        z: 1.58,
+      },
+      "key1"
+    )
+    .to(
+      camera.position,
+      {
+        z: 4,
+      },
+      "key1"
+    )
+    .to(
+      scene.rotation,
+      {
+        z: 0,
+        y: 0,
+      },
+      "key2"
+    )
+    .to(
+      camera.position,
+      {
+        z: 6,
+        x: -1,
+      },
+      "key2"
+    )
+    .to(
+      scene.rotation,
+      {
+        z: 0,
+        y: 6.3,
+      },
+      "key3"
+    )
+    .to(
+      camera.position,
+      {
+        y: 0,
+        x: 0.8,
+      },
+      "key3"
+    );
 };
 
 export const designComponentTl = (container, textOne, textTwo) =>
@@ -111,7 +158,7 @@ export const colorsComponentTl = (sectionRef, leftRef, rightRef, textRef) => {
     scrollTrigger: {
       trigger: sectionRef,
       start: "top top",
-      end: `+=${sectionRef.offsetWidth + 1000}`,
+      end: `+=${sectionRef.offsetWidth}`,
       scrub: true,
       pin: true,
       pinSpacing: true,
@@ -123,7 +170,7 @@ export const colorsComponentTl = (sectionRef, leftRef, rightRef, textRef) => {
       scrollTrigger: {
         trigger: sectionRef,
         start: "top top",
-        end: `+=${sectionRef.offsetWidth + 1000}`,
+        end: `+=${sectionRef.offsetWidth}`,
         scrub: true,
       },
     })

@@ -33,4 +33,5 @@ export const Center = styled.div`
   transform: translate(-50%, -50%) rotate(-90deg);
   font-size: var(--fontxxl);
   text-transform: uppercase;
+  filter: brightness(0.85);
 `;

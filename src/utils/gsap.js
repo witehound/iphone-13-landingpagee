@@ -98,3 +98,69 @@ export const batteryComponentTl = (elem) => {
     })
   );
 };
+
+export const colorsComponentTl = (sectionRef, leftRef, rightRef, textRef) => {
+  let updateColor = (color, text, rgbaColor) => {
+    textRef.innerText = text;
+    textRef.style.color = color;
+    rightRef.style.backgroundColor = `rgba(${rgbaColor}, 0.4)`;
+    leftRef.style.backgroundColor = `rgba(${rgbaColor}, 0.8)`;
+  };
+
+  gsap.to(sectionRef, {
+    scrollTrigger: {
+      trigger: sectionRef,
+      start: "top top",
+      end: `+=${sectionRef.offsetWidth + 1000}`,
+      scrub: true,
+      pin: true,
+      pinSpacing: true,
+    },
+  });
+
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: sectionRef,
+        start: "top top",
+        end: `+=${sectionRef.offsetWidth + 1000}`,
+        scrub: true,
+      },
+    })
+    .to(sectionRef, {
+      onStart: updateColor,
+      onStartParams: ["#9BB5CE", "Sierra Blue", "155, 181, 206"],
+      onReverseComplete: updateColor,
+      onReverseCompleteParams: ["#9BB5CE", "Sierra Blue", "155, 181, 206"],
+    })
+    .to(sectionRef, {
+      onStart: updateColor,
+      onStartParams: ["#F9E5C9", "Gold", "249, 229, 201"],
+      onReverseComplete: updateColor,
+      onReverseCompleteParams: ["#F9E5C9", "Gold", "249, 229, 201"],
+    })
+    .to(sectionRef, {
+      onStart: updateColor,
+      onStartParams: ["#505F4E", "Alpine Green", "80, 95, 78"],
+      onReverseComplete: updateColor,
+      onReverseCompleteParams: ["#505F4E", "Alpine Green", "80, 95, 78"],
+    })
+    .to(sectionRef, {
+      onStart: updateColor,
+      onStartParams: ["#574f6f", "Deep Purple", "87, 79, 111"],
+      onReverseComplete: updateColor,
+      onReverseCompleteParams: ["#574f6f", "Deep Purple", "87, 79, 111"],
+    })
+    .to(sectionRef, {
+      onStart: updateColor,
+      onStartParams: ["#A50011", "Red", "165, 0, 17"],
+      onReverseComplete: updateColor,
+      onReverseCompleteParams: ["#A50011", "Red", "165, 0, 17"],
+    })
+    .to(sectionRef, {
+      onStart: updateColor,
+      onStartParams: ["#215E7C", "Blue", "33, 94, 124"],
+      onReverseComplete: updateColor,
+      onReverseCompleteParams: ["#215E7C", "Blue", "33, 94, 124"],
+    });
+};

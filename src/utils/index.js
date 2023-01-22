@@ -8,6 +8,7 @@ import {
   designComponentTl,
   displayComponentTl,
   batteryComponentTl,
+  colorsComponentTl,
 } from "./gsap";
 
 export {
@@ -20,4 +21,5 @@ export {
   designComponentTl,
   displayComponentTl,
   batteryComponentTl,
+  colorsComponentTl,
 };

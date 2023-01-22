@@ -80,3 +80,21 @@ export const displayComponentTl = (container, textOne, textTwo) =>
     })
     .fromTo(textOne.current, { x: 0 }, { x: "20%" }, "key1")
     .fromTo(textTwo.current, { x: 0 }, { x: "-20%" }, "key1");
+
+export const batteryComponentTl = (elem) => {
+  let elements = gsap.utils.selector(elem);
+
+  let t1 = gsap.timeline();
+
+  elements("li").forEach((elm) =>
+    t1.to(elm, {
+      scrollTrigger: {
+        trigger: elm,
+        start: "top center",
+        end: "bottom center",
+        scrub: true,
+      },
+      opacity: 1,
+    })
+  );
+};

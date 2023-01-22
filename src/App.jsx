@@ -7,6 +7,7 @@ import {
   Design,
   Display,
   Processor,
+  Battery,
 } from "./components";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Design />
       <Display />
       <Processor />
+      <Battery />
     </div>
   );
 }

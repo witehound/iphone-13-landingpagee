@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { Container } from "./PhoneModelStyles";
+import { Container } from "./PhoneStyles";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Environment } from "@react-three/drei";
 import { Model } from "../../assets";

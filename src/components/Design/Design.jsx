@@ -1,9 +1,5 @@
 import React, { useRef, useLayoutEffect } from "react";
-import {
-  Container,
-  TextContainer,
-  TextContainerTwo,
-} from "./DesignModelStyles";
+import { Container, TextContainer, TextContainerTwo } from "./DesignStyles";
 import { designComponentTl } from "../../utils";
 
 const Design = () => {

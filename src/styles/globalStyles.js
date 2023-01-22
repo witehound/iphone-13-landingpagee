@@ -23,7 +23,7 @@ export const GlobalStyle = createGlobalStyle`
   --white: #ffffff;
   --blue: #0071e3;
   --blueRgba:"0, 113, 227";
-  --whiitesmoke : "#F5F5F5";
+  --whiitesmoke : "#f5f5f5";
   //fonts
   --fontL: "Source Sans Pro light";
   --fontR: "Source Sans Pro";

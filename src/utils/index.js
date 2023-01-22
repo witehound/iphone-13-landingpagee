@@ -6,6 +6,7 @@ import {
   to,
   phoneScrollTrigerOne,
   designComponentTl,
+  displayComponentTl,
 } from "./gsap";
 
 export {
@@ -16,4 +17,5 @@ export {
   to,
   phoneScrollTrigerOne,
   designComponentTl,
+  displayComponentTl,
 };

@@ -66,3 +66,17 @@ export const designComponentTl = (container, textOne, textTwo) =>
     })
     .fromTo(textOne.current, { x: 0 }, { x: "10%" }, "key1")
     .fromTo(textTwo.current, { x: 0 }, { x: "-10%" }, "key1");
+
+export const displayComponentTl = (container, textOne, textTwo) =>
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: container.current,
+        start: "top-=300 top",
+        bottom: "bottom top",
+        scrub: true,
+      },
+      delay: 0.4,
+    })
+    .fromTo(textOne.current, { x: 0 }, { x: "20%" }, "key1")
+    .fromTo(textTwo.current, { x: 0 }, { x: "-20%" }, "key1");

@@ -1,10 +1,6 @@
 import React, { useRef, useEffect, useLayoutEffect } from "react";
 import { Section, TextContainer, Text } from "./QuotesStyles.js";
-import {
-  animateQuote,
-  createGsapPlugIn,
-  createFixedHero,
-} from "../../utils/gsap.js";
+import { animateQuote, createGsapPlugIn, createFixedHero } from "../../utils";
 
 const Quotes = () => {
   createGsapPlugIn();

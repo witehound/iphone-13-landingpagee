@@ -7,8 +7,8 @@ function App() {
     <div>
       <GlobalStyle />
       <Quotes />
+      {/* <PhoneModel /> */}
       <Hero />
-      <PhoneModel />
     </div>
   );
 }

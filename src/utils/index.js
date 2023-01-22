@@ -1,3 +1,17 @@
-import { animateQuote } from "./gsap";
+import {
+  animateQuote,
+  createGsapPlugIn,
+  createFixedHero,
+  fromTo,
+  to,
+  phoneScrollTrigerOne,
+} from "./gsap";
 
-export { animateQuote };
+export {
+  animateQuote,
+  createGsapPlugIn,
+  createFixedHero,
+  fromTo,
+  to,
+  phoneScrollTrigerOne,
+};

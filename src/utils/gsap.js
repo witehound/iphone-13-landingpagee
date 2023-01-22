@@ -52,3 +52,17 @@ export const phoneScrollTrigerOne = (elem, camera) => {
     { x: 0 }
   );
 };
+
+export const designComponentTl = (container, textOne, textTwo) =>
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: container.current,
+        start: "top-=200 top",
+        bottom: "bottom top",
+        scrub: true,
+      },
+      delay: 0.4,
+    })
+    .fromTo(textOne.current, { x: 0 }, { x: "10%" }, "key1")
+    .fromTo(textTwo.current, { x: 0 }, { x: "-10%" }, "key1");

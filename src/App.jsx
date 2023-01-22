@@ -8,6 +8,7 @@ import {
   Display,
   Processor,
   Battery,
+  Colors,
 } from "./components";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Display />
       <Processor />
       <Battery />
+      <Colors />
     </div>
   );
 }

@@ -5,5 +5,15 @@ import Design from "./Design/Design";
 import Display from "./Display/Display";
 import Processor from "./Processor/Processor";
 import Battery from "./Battery/Battery";
+import Colors from "./Colors/Colors";
 
-export { Quotes, Hero, PhoneModel, Design, Display, Processor, Battery };
+export {
+  Quotes,
+  Hero,
+  PhoneModel,
+  Design,
+  Display,
+  Processor,
+  Battery,
+  Colors,
+};

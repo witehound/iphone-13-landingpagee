@@ -1,10 +1,16 @@
-import React, { useRef, useLayoutEffect, Suspense } from "react";
+import React, {
+  useRef,
+  useLayoutEffect,
+  Suspense,
+  useContext,
+  useEffect,
+} from "react";
 import { Section, Left, Right, Center } from "./ColorsStyles";
 import { colorsComponentTl } from "../../utils";
-import { useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Environment } from "@react-three/drei";
 import { ModelTwo } from "../index";
+import { ColorContext } from "../../context";
 
 const Colors = () => {
   const sectionRef = useRef(null);
@@ -12,7 +18,14 @@ const Colors = () => {
   const leftRef = useRef(null);
   const centerRef = useRef(null);
 
-  const { materials } = useGLTF("/scene.gltf");
+  const { currColor, changeColorContext } = useContext(ColorContext);
+
+  useEffect(() => {
+    centerRef.current.innerText = currColor.text;
+    centerRef.current.style.color = currColor.color;
+    rightRef.current.style.backgroundColor = `rgba(${currColor.rgba}, 0.4)`;
+    leftRef.current.style.backgroundColor = `rgba(${currColor.rgba}, 0.8)`;
+  }, [currColor]);
 
   useLayoutEffect(() => {
     colorsComponentTl(
@@ -20,7 +33,8 @@ const Colors = () => {
       leftRef.current,
       rightRef.current,
       centerRef.current,
-      materials
+      changeColorContext,
+      currColor
     );
   }, []);
   return (

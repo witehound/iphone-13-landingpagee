@@ -151,14 +151,21 @@ export const colorsComponentTl = (
   leftRef,
   rightRef,
   textRef,
-  materials
+  changeColorContext,
+  currColor
 ) => {
-  let updateColor = (color, text, rgbaColor) => {
-    materials.Body.color.set(color);
+  let updateColor = (color, text, rgba) => {
+    const colorObj = {
+      color,
+      text,
+      rgba,
+    };
+    changeColorContext(colorObj);
+
     textRef.innerText = text;
     textRef.style.color = color;
-    rightRef.style.backgroundColor = `rgba(${rgbaColor}, 0.4)`;
-    leftRef.style.backgroundColor = `rgba(${rgbaColor}, 0.8)`;
+    rightRef.style.backgroundColor = `rgba(${rgba}, 0.4)`;
+    leftRef.style.backgroundColor = `rgba(${rgba}, 0.8)`;
   };
 
   gsap.to(sectionRef, {

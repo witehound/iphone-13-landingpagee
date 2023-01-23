@@ -12,6 +12,7 @@ import {
   Camera,
   Pricing,
 } from "./components";
+import { ColorContextProvider } from "./context";
 
 function App() {
   return (
@@ -24,9 +25,11 @@ function App() {
       <Display />
       <Processor />
       <Battery />
-      <Colors />
-      <Camera />
-      <Pricing />
+      <ColorContextProvider>
+        <Colors />
+        <Camera />
+        <Pricing />
+      </ColorContextProvider>
     </div>
   );
 }

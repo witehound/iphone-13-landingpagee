@@ -23,8 +23,8 @@ function App() {
       <Hero />
       <Design />
       <Display />
-      {/* <Processor />
-      <Battery />
+      <Processor />
+      {/* <Battery />
       <ColorContextProvider>
         <Colors />
         <Camera />

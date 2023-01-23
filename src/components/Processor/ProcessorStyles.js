@@ -38,6 +38,16 @@ export const Title = styled.h1`
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  @media screen and (max-width: 70em) {
+    font-size: var(--fontxxl);
+  }
+  @media screen and (max-width: 64em) {
+    font-size: var(--fontxl);
+  }
+  @media screen and (max-width: 40em) {
+    font-size: var(--fontlg);
+  }
 `;
 
 export const ProcessorImg = styled.div`
@@ -56,6 +66,14 @@ export const ProcessorImg = styled.div`
     height: auto;
     width: 100%;
   }
+
+  @media screen and (max-width: 70em) {
+    z-index: 5;
+  }
+
+  @media screen and (max-width: 40em) {
+    display: none;
+  }
 `;
 
 export const Text = styled.div`
@@ -70,5 +88,24 @@ export const Text = styled.div`
   span {
     margin: 0.2rem 0;
     padding: 2rem;
+  }
+
+  @media screen and (max-width: 64em) {
+    width: 50%;
+  }
+  @media screen and (max-width: 48em) {
+    width: 100%;
+    font-size: var(--fontxs);
+    span {
+      width: 40%;
+      padding-left: 1rem;
+    }
+
+    & > *:last-child {
+      align-self: flex-end;
+      padding-left: 0;
+      padding-right: 1rem;
+      text-align: right;
+    }
   }
 `;

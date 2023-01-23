@@ -84,7 +84,7 @@ export const Btn = styled.button`
   justify-content: center;
   margin: 0;
   padding: 0.4rem 1rem;
-  border-radius: 15%;
+  border-radius: 5%;
   border: none;
   outline: none;
   background-color: var(--blue);
@@ -105,4 +105,10 @@ export const BtnLink = styled.a`
   &:hover {
     text-decoration: underline;
   }
+`;
+
+export const InddicatorText = styled.div`
+  font-size: var(--fontsm);
+  position: absolute;
+  top: 1rem;
 `;

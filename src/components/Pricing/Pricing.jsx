@@ -11,6 +11,7 @@ import {
   ButtonContainer,
   Btn,
   BtnLink,
+  InddicatorText,
 } from "./PricingStyles";
 import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
@@ -29,6 +30,7 @@ const Pricing = () => {
     <Container>
       <Section ref={sectionRef}>
         <Phone>
+          <InddicatorText>360&deg; &#x27F2;</InddicatorText>
           <Canvas camera={{ fov: 14 }}>
             <ambientLight intensity={1} />
             <directionalLight intensity={0.4} />
@@ -72,7 +74,7 @@ const Pricing = () => {
         <SubTitle>Starts at $1099 *</SubTitle>
         <ButtonContainer>
           <Btn>Buy Now</Btn>
-          <BtnLink href="#">Learn More</BtnLink>
+          <BtnLink href="#">Learn More &#x2192;</BtnLink>
         </ButtonContainer>
       </Details>
     </Container>

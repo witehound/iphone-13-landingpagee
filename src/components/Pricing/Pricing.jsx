@@ -17,7 +17,6 @@ import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls } from "@react-three/drei";
 import { ModelThree } from "../index";
 import { ColorContext } from "../../context";
-import { StayCurrentLandscape } from "@material-ui/icons";
 
 const Pricing = () => {
   const sectionRef = useRef(null);
@@ -36,7 +35,7 @@ const Pricing = () => {
 
   useEffect(() => {
     sectionRef.current.style.backgroundColor = `rgba(${currColor.rgba}, 0.4)`;
-  }, [StayCurrentLandscape]);
+  }, [currColor]);
   return (
     <Container>
       <Section ref={sectionRef}>

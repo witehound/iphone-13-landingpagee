@@ -218,3 +218,51 @@ export const colorsComponentTl = (
       onReverseCompleteParams: ["#215E7C", "Blue", "33, 94, 124"],
     });
 };
+
+export const cameraComponentTl = (sectionRef, videoOne, videoTwo, title) => {
+  gsap.to(sectionRef, {
+    scrollTrigger: {
+      trigger: sectionRef,
+      start: "top top",
+      end: `bottom+=500 bottom`,
+      scrub: true,
+      pin: true,
+      pinSpacing: true,
+    },
+  });
+
+  let elements = gsap.utils.selector(title);
+
+  let t1 = gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: sectionRef,
+        start: "top top",
+        end: `bottom+=500 bottom`,
+        scrub: true,
+      },
+    })
+    .to(videoOne, { scale: 0.3 }, "key1")
+    .to(videoTwo, { scale: 0.6 }, "key1");
+
+  elements("h1").forEach((el) => {
+    t1.fromTo(
+      el,
+      {
+        scrollTrigger: {
+          trigger: el,
+          start: "top top",
+          end: `bottom bottom`,
+          scrub: true,
+        },
+
+        x: 200,
+        opacity: 0,
+      },
+      {
+        x: 0,
+        opacity: 1,
+      }
+    );
+  });
+};

@@ -9,6 +9,7 @@ import {
   Processor,
   Battery,
   Colors,
+  Camera,
 } from "./components";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Processor />
       <Battery />
       <Colors />
+      <Camera />
     </div>
   );
 }

@@ -8,6 +8,7 @@ import Battery from "./Battery/Battery";
 import Colors from "./Colors/Colors";
 import Model from "./Scene/Scene";
 import ModelTwo from "./Scene/SceneTwo";
+import Camera from "./Camera/Camera";
 
 export {
   Quotes,
@@ -20,4 +21,5 @@ export {
   Colors,
   Model,
   ModelTwo,
+  Camera,
 };

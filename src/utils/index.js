@@ -9,6 +9,7 @@ import {
   displayComponentTl,
   batteryComponentTl,
   colorsComponentTl,
+  cameraComponentTl,
 } from "./gsap";
 
 export {
@@ -22,4 +23,5 @@ export {
   displayComponentTl,
   batteryComponentTl,
   colorsComponentTl,
+  cameraComponentTl,
 };

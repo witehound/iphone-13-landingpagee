@@ -1,17 +1,14 @@
 import React, { useRef, useLayoutEffect } from "react";
 import { useGLTF } from "@react-three/drei";
-import { phoneScrollTrigerOne } from "../../utils";
 import { useThree } from "@react-three/fiber";
 
-function Model(props) {
+function ModelTwo(props) {
   const { nodes, materials } = useGLTF("/scene.gltf");
   let camera = useThree((state) => state.camera);
-  let scene = useThree((state) => state.scene);
+  const group = useRef(null);
 
   useLayoutEffect(() => {
-    // to(camera);
-    // return () => {};
-    phoneScrollTrigerOne("#phone-model", camera, "#battery", scene);
+    camera.position.set(-0.1, 0.4, 5);
   }, []);
   return (
     <group {...props} dispose={null}>
@@ -141,4 +138,4 @@ function Model(props) {
 
 useGLTF.preload("/scene.gltf");
 
-export default Model;
+export default ModelTwo;

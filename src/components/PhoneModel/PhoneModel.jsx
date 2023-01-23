@@ -1,9 +1,8 @@
 import React, { Suspense } from "react";
 import { Container } from "./PhoneStyles";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Environment } from "@react-three/drei";
-import { Model } from "../../assets";
-import {} from "../../utils/gsap";
+import { Environment } from "@react-three/drei";
+import { Model } from "../index";
 
 const PhoneModel = () => {
   return (
@@ -15,7 +14,6 @@ const PhoneModel = () => {
           <Model />
         </Suspense>
         <Environment preset="night" />
-        {/* <OrbitControls /> */}
       </Canvas>
     </Container>
   );

@@ -1,7 +1,10 @@
-import React, { useRef, useLayoutEffect } from "react";
+import React, { useRef, useLayoutEffect, Suspense } from "react";
 import { Section, Left, Right, Center } from "./ColorsStyles";
 import { colorsComponentTl } from "../../utils";
 import { useGLTF } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import { Environment } from "@react-three/drei";
+import { ModelTwo } from "../index";
 
 const Colors = () => {
   const sectionRef = useRef(null);
@@ -23,8 +26,17 @@ const Colors = () => {
   return (
     <Section ref={sectionRef}>
       <Left ref={leftRef} />
-      <Center ref={centerRef}>Sierra Blue</Center>
-      <Right ref={rightRef} />
+      <Center ref={centerRef} />
+      <Right ref={rightRef}>
+        <Canvas camera={{ fov: 6.5 }}>
+          <ambientLight intensity={1.25} />
+          <directionalLight position={[1, 0, 0]} />
+          <Suspense fallback={null}>
+            <ModelTwo />
+          </Suspense>
+          <Environment preset="night" />
+        </Canvas>
+      </Right>
     </Section>
   );
 };

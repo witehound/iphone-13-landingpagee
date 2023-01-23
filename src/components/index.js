@@ -6,6 +6,8 @@ import Display from "./Display/Display";
 import Processor from "./Processor/Processor";
 import Battery from "./Battery/Battery";
 import Colors from "./Colors/Colors";
+import Model from "./Scene/Scene";
+import ModelTwo from "./Scene/SceneTwo";
 
 export {
   Quotes,
@@ -16,4 +18,6 @@ export {
   Processor,
   Battery,
   Colors,
+  Model,
+  ModelTwo,
 };

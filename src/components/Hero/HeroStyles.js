@@ -17,6 +17,15 @@ export const Title = styled.h1`
   font-family: var(--fontL);
   color: var(--greyLight);
   background-color: transparent;
+
+  @media screen and (max-width: 48em) {
+    font-size: var(--fontmd);
+    color: var(--offWhite);
+  }
+
+  @media screen and (max-width: 30em) {
+    left: 1rem;
+  }
 `;
 
 export const TextContaiiner = styled.div`
@@ -29,7 +38,7 @@ export const TextContaiiner = styled.div`
   z-index: 1;
 
   span {
-    background-image: linear-gradient(-45deg, var(--gradient));
+    background-image: linear-gradient(45deg, var(--gradient));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -37,6 +46,18 @@ export const TextContaiiner = styled.div`
     padding: 0 2rem;
     text-transform: uppercase;
     font-weight: 600;
+    @media screen and (max-width: 64em) {
+      background-image: linear-gradient(90deg, var(--gradient));
+      font-weight: 300;
+      font-size: var(--fontxxl);
+      padding: 5rem;
+    }
+  }
+
+  @media screen and (max-width: 48em) {
+    flex-direction: column;
+    align-items: flex-start;
+    filter: brightness(1.1);
   }
 `;
 

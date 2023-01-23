@@ -21,6 +21,9 @@ export const Title = styled.h1`
 
   @media screen and (max-width: 70em) {
     font-size: var(--fontxxl);
+
+    left: 15rem;
+    top: 15rem;
   }
 
   @media screen and (max-width: 48em) {

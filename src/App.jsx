@@ -25,11 +25,11 @@ function App() {
       <Display />
       <Processor />
       <Battery />
-      {/* <ColorContextProvider>
+      <ColorContextProvider>
         <Colors />
-        <Camera />
-        <Pricing />
-      </ColorContextProvider> */}
+        {/* <Camera />
+        <Pricing /> */}
+      </ColorContextProvider>
     </div>
   );
 }

@@ -146,8 +146,15 @@ export const batteryComponentTl = (elem) => {
   );
 };
 
-export const colorsComponentTl = (sectionRef, leftRef, rightRef, textRef) => {
+export const colorsComponentTl = (
+  sectionRef,
+  leftRef,
+  rightRef,
+  textRef,
+  materials
+) => {
   let updateColor = (color, text, rgbaColor) => {
+    materials.Body.color.set(color);
     textRef.innerText = text;
     textRef.style.color = color;
     rightRef.style.backgroundColor = `rgba(${rgbaColor}, 0.4)`;

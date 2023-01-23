@@ -27,8 +27,8 @@ function App() {
       <Battery />
       <ColorContextProvider>
         <Colors />
-        {/* <Camera />
-        <Pricing /> */}
+        <Camera />
+        <Pricing />
       </ColorContextProvider>
     </div>
   );

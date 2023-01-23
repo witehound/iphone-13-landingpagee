@@ -18,6 +18,21 @@ export const Title = styled.h1`
   text-transform: uppercase;
   font-size: var(--fontxxl);
   z-index: 1;
+
+  @media screen and (max-width: 70em) {
+    font-size: var(--fontxxl);
+  }
+
+  @media screen and (max-width: 48em) {
+    font-size: var(--fontxl);
+  }
+
+  @media screen and (max-width: 48em) {
+    font-size: var(--fontlg);
+    left: 10rem;
+    top: 10rem;
+    width: 70%;
+  }
 `;
 
 export const BatteryList = styled.ul`
@@ -39,5 +54,9 @@ export const BatteryList = styled.ul`
 
   & > *:not(:first-child):not(:last-child) {
     margin: 0.5rem 0;
+  }
+
+  @media screen and (max-width: 48em) {
+    top: 30%;
   }
 `;

@@ -24,8 +24,8 @@ function App() {
       <Design />
       <Display />
       <Processor />
-      {/* <Battery />
-      <ColorContextProvider>
+      <Battery />
+      {/* <ColorContextProvider>
         <Colors />
         <Camera />
         <Pricing />

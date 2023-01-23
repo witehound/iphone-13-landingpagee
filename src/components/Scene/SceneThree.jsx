@@ -9,6 +9,10 @@ function ModelThree(props) {
 
   useLayoutEffect(() => {
     camera.position.set(-0.1, 0.4, 5);
+    if (window.matchMedia("(max-width: 48em)").matches) {
+      camera.fov = 18;
+      camera.updateProjectionMatrix();
+    }
   }, []);
   return (
     <group {...props} dispose={null}>

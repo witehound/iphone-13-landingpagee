@@ -19,9 +19,9 @@ function App() {
     <div>
       <GlobalStyle />
       <Quotes />
-      <PhoneModel />
+      {/* <PhoneModel /> */}
       <Hero />
-      <Design />
+      {/* <Design />
       <Display />
       <Processor />
       <Battery />
@@ -29,7 +29,7 @@ function App() {
         <Colors />
         <Camera />
         <Pricing />
-      </ColorContextProvider>
+      </ColorContextProvider> */}
     </div>
   );
 }

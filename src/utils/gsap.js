@@ -27,77 +27,96 @@ export const fromTo = (elem) => {
 
 export const to = (elem) => gsap.to(elem.position, { x: 1 });
 
-export const phoneScrollTrigerOne = (elem, camera, end, scene) => {
+export const phoneScrollTrigerOne = (elem, camera, end, scene, fov) => {
   camera.position.set(0, 2, 6);
-  const t1 = gsap.timeline({
-    scrollTrigger: {
-      trigger: elem,
-      start: "top+=200 top",
-      endTrigger: end,
-      end: "top top",
-      scrub: true,
-    },
-  });
 
-  t1.fromTo(
-    camera.position,
+  let mm = gsap.matchMedia();
+
+  mm.add(
     {
-      y: 2,
+      isDesktop: `(min-width: 48em)`,
+      isMobile: `(max-width: 48em)`,
     },
-    { y: 0 }
-  )
-    .to(scene.rotation, {
-      y: 0.8,
-    })
-    .to(scene.rotation, {
-      y: 3,
-    })
-    .to(
-      scene.rotation,
-      {
-        z: 1.58,
-      },
-      "key1"
-    )
-    .to(
-      camera.position,
-      {
-        z: 4,
-      },
-      "key1"
-    )
-    .to(
-      scene.rotation,
-      {
-        z: 0,
-        y: 0,
-      },
-      "key2"
-    )
-    .to(
-      camera.position,
-      {
-        z: 6,
-        x: -1,
-      },
-      "key2"
-    )
-    .to(
-      scene.rotation,
-      {
-        z: 0,
-        y: 6.3,
-      },
-      "key3"
-    )
-    .to(
-      camera.position,
-      {
-        y: 0,
-        x: 0.8,
-      },
-      "key3"
-    );
+    (context) => {
+      let { isDesktop, isMobile } = context.conditions;
+      const t1 = gsap.timeline({
+        scrollTrigger: {
+          trigger: elem,
+          start: "top+=200 top",
+          endTrigger: end,
+          end: "top top",
+          scrub: true,
+        },
+      });
+
+      t1.fromTo(
+        camera.position,
+        {
+          y: 2,
+        },
+        { y: 0 }
+      )
+        .to(scene.rotation, {
+          y: 0.8,
+        })
+        .to(scene.rotation, {
+          y: 3,
+        })
+        .to(
+          scene.rotation,
+          {
+            z: 1.58,
+          },
+          "key1"
+        )
+        .to(
+          camera.position,
+          {
+            z: 4,
+          },
+          "key1"
+        )
+        .to(
+          scene.rotation,
+          {
+            z: 0,
+            y: 0,
+          },
+          "key2"
+        )
+        .to(
+          camera.position,
+          {
+            z: 6,
+            x: isDesktop ? -1 : 0,
+          },
+          "key2"
+        )
+        .to(
+          scene.rotation,
+          {
+            z: 0,
+            y: 6.3,
+          },
+          "key3"
+        )
+        .to(
+          camera.position,
+          {
+            y: 0,
+            x: isDesktop ? 0.8 : 0,
+          },
+          "key3"
+        );
+      if (isMobile) {
+        camera.fov = 20;
+        camera.updateProjectionMatrix();
+      }
+      return () => {
+        if (t1) t1.kill();
+      };
+    }
+  );
 };
 
 export const designComponentTl = (container, textOne, textTwo) =>

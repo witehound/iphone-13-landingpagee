@@ -10,7 +10,13 @@ function Model(props) {
 
   useLayoutEffect(() => {
     materials.Body.color.set("#9BB5CE");
-    phoneScrollTrigerOne("#phone-model", camera, "#battery", scene);
+    let fov = camera.fov;
+
+    fov = (1400 * 12) / window.innerWidth;
+    camera.fov = fov;
+    camera.updateProjectionMatrix();
+
+    phoneScrollTrigerOne("#phone-model", camera, "#battery", scene, fov);
   }, []);
   return (
     <group {...props} dispose={null}>

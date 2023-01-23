@@ -22,8 +22,8 @@ function App() {
       {/* <PhoneModel /> */}
       <Hero />
       <Design />
-      {/* <Display />
-      <Processor />
+      <Display />
+      {/* <Processor />
       <Battery />
       <ColorContextProvider>
         <Colors />

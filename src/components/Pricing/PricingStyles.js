@@ -36,7 +36,11 @@ export const Colors = styled.ul`
   justify-content: space-around;
   position: absolute;
   left: 35%;
-  top: 30%;
+  top: 20%;
+
+  @media screen and (max-width: 64em) {
+    left: 10%;
+  }
 `;
 
 export const Color = styled.li`

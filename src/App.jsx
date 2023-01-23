@@ -19,7 +19,7 @@ function App() {
     <div>
       <GlobalStyle />
       <Quotes />
-      {/* <PhoneModel /> */}
+      <PhoneModel />
       <Hero />
       <Design />
       <Display />

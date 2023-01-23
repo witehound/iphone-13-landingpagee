@@ -42,7 +42,7 @@ export const TitleContainer = styled.div`
   & > *:nth-child(2) {
     margin-left: 6rem;
   }
-  & > *:nth-child(2) {
+  & > *:nth-child(3) {
     margin-left: 12rem;
   }
 `;

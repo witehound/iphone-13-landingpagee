@@ -10,6 +10,7 @@ import {
   Battery,
   Colors,
   Camera,
+  Pricing,
 } from "./components";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       <Battery />
       <Colors />
       <Camera />
+      <Pricing />
     </div>
   );
 }

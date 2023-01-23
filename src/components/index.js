@@ -9,6 +9,8 @@ import Colors from "./Colors/Colors";
 import Model from "./Scene/Scene";
 import ModelTwo from "./Scene/SceneTwo";
 import Camera from "./Camera/Camera";
+import Pricing from "./Pricing/Pricing";
+import ModelThree from "./Scene/SceneThree";
 
 export {
   Quotes,
@@ -22,4 +24,6 @@ export {
   Model,
   ModelTwo,
   Camera,
+  Pricing,
+  ModelThree,
 };
